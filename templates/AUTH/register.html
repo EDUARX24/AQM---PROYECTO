@@ -1,0 +1,160 @@
+{% extends 'layout.html' %} {% block title %}Register{%endblock %} {% block
+customCss %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='Css/style.css') }}"
+/>
+{%endblock%} {% block body%}
+<!-- Registration 1 - Bootstrap Brain Component -->
+<div class="py-3 py-md-5">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6">
+        <div class="bg-white p-4 p-md-5 rounded shadow-sm">
+          <div class="row">
+            <div class="col-12">
+              <div class="text-center mb-5">
+                <a href="#!">
+                  <img
+                    src="static/Images/Logo.jpg"
+                    alt="BootstrapBrain Logo"
+                    width="175"
+                    height="57"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <form action="/register" method="POST">
+            <div class="row gy-3 gy-md-4 overflow-hidden">
+              <div class="col-12 col-lg-6">
+                <label for="firstName" class="form-label"
+                  >Nombre <span class="text-danger">*</span></label
+                >
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-person-vcard"></i>
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="firstName"
+                    id="firstName"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <label for="lastName" class="form-label"
+                  >Apellido<span class="text-danger">*</span></label
+                >
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-card-checklist"></i>
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="lastName"
+                    id="lastName"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <label for="email" class="form-label"
+                  >Email <span class="text-danger">*</span></label
+                >
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-envelope"></i>
+                  </span>
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <label for="gender" class="form-label"
+                  >Genero <span class="text-danger">*</span></label
+                >
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-gender-ambiguous"></i>
+                  </span>
+                  <select
+                    class="form-select"
+                    type="text"
+                    id="select1"
+                    name="gender"
+                    aria-label="Default select example"
+                  >
+                    <option selected disabled>Seleccionar</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <label for="phone" class="form-label"
+                  >Teléfono <span class="text-danger">*</span></label
+                >
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-telephone-fill"></i>
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="phone"
+                    id="phone"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <label for="password" class="form-label"
+                  >Contraseña <span class="text-danger">*</span></label
+                >
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-key"></i>
+                  </span>
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    id="password"
+                    value=""
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="d-grid">
+                  <button class="btn btn-outline-primary btn-lg" type="submit">
+                    Registrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-12">
+              <hr class="mt-5 mb-4 border-secondary-subtle" />
+              <p class="m-0 text-secondary text-center">
+                Ya tienes una cuenta?
+                <a href="#!" class="link-primary text-decoration-none">Login</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}
